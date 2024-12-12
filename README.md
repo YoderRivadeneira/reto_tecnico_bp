@@ -13,7 +13,7 @@ DB: Postgresql:  cliente_persona_db
 Broker message: Rabbit -> cloudAMQP
 
 
-Estructura del proyecto: Arquitectura hexagonal orientada a modulos y puertos
+Estructura del proyecto: Arquitectura hexagonal orientada a modulos y puertos, clean code, arquitectura limpia
 
 
 <h4>web_service 2: cuenta_movimientos</h4>
@@ -25,7 +25,7 @@ DB: Postgresql: cuenta_movimientos_db
 
 Broker message: Rabbit -> cloudAMQP
 
-Estructura del proyecto: Arquitectura hexagonal orientada a modulos y puertos
+Estructura del proyecto: Estructura convencional de  arquitectura limpia y clean code
 
 
 
