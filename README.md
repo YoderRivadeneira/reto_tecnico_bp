@@ -69,10 +69,31 @@ Se creó los DockerFile para el respectivo despliegue en contenedores docker
 Web_service 1:
 
 
+  - Modulo principal
+    
 ![image](https://github.com/user-attachments/assets/76ebef5d-e598-4c45-ad13-4b470123a727)
+
+
+  - Modulo de infraestructura = postgresql_repository
+
+
+![image](https://github.com/user-attachments/assets/f6afac5d-ba9a-4284-9515-243ef41d83b2)
+
+
+  - Modulo de infraestructura = rabbit_bus
+
+
+![image](https://github.com/user-attachments/assets/a980dd31-9de8-4ed4-96f5-3746d83317e6)
+
+
 
 Web_service 2:
 
+
+  - Modulo principal
+
+    
+![image](https://github.com/user-attachments/assets/fa210b2c-9f3d-4893-911b-46849f257a87)
 
 
 
