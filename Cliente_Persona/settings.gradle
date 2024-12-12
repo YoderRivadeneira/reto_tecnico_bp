@@ -1,0 +1,20 @@
+rootProject.name = 'Cliente_Persona'
+
+include ':cliente_Persona'
+findProject(':cliente_Persona').projectDir = file('./applications/cliente_Persona')
+
+include ':model'
+findProject(':model').projectDir = file('./domain/model')
+
+
+include ':usecases'
+findProject(':usecases').projectDir = file('./domain/usecases')
+
+
+include ':postgresql_repository'
+findProject(':postgresql_repository').projectDir = file('./infrastructure/driven_adapters/postgresql_repository')
+
+
+
+include ':rabbit_bus'
+findProject(':rabbit_bus').projectDir = file('./infrastructure/driven_adapters/rabbit_bus')

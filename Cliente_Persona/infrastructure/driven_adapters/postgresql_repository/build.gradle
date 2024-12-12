@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.3.5' apply false
+    id 'io.spring.dependency-management' version '1.1.6'
+}
+
+group = 'com.example.banco_hex_yoder'
+version = '1.0-SNAPSHOT'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+
+    runtimeOnly 'org.postgresql:postgresql'
+
+
+    implementation project(':model')
+    implementation project(':usecases')
+
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
