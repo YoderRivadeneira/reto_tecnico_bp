@@ -16,7 +16,7 @@ Broker message: Rabbit -> cloudAMQP
 Estructura del proyecto: Arquitectura hexagonal orientada a modulos y puertos
 
 
-<h4>web_service 2:</h4>
+<h4>web_service 2: cuenta_movimientos</h4>
 
 
 Java version: 21
