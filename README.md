@@ -1,5 +1,17 @@
 <h1 align="center">Reto Técnico BP</h1>
 
+
+
+
+
+<h2 align="center">F1: Generación de CRUDS (Crear, editar, actualizar y eliminar registros - Entidades: Cliente, 
+Cuenta y Movimiento). </h2>
+
+
+Los nombres de los endpoints a generar son: 
+• /cuentas 
+• /clientes 
+• /movimientos 
 <h2 align="center">F6: Pruebas de Integración</h2>
 
 <p align="center">Implementar 1 prueba de integración:</p>
