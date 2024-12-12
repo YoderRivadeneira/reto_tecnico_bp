@@ -28,6 +28,15 @@ Broker message: Rabbit -> cloudAMQP
 Estructura del proyecto: Estructura convencional de  arquitectura limpia y clean code
 
 
+<h2 align="center">Comunicación asincrona  entre los web services-> orientada a eventos </h2>
+
+
+Cuando se crea un nuevo cliente en el web service 1, este envía el evento a cloudAMQP, el web service 2 recibe este evento y le crea una cuenta
+
+
+
+Cuando se modifica el estado de un  cliente de "true" a "false" en el web service 1, este envía el evento a cloudAMQP, el web service 2 recibe este evento y si el estado del cliente es false actualiza el saldo de todas las  cuentas de ese cliente a 0.
+
 
 
 <h2 align="center">F1: Generación de CRUDS (Crear, editar, actualizar y eliminar registros - Entidades: Cliente, 
