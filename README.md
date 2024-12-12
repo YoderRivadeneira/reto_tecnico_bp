@@ -1,6 +1,23 @@
 <h1 align="center">Reto Técnico BP</h1>
 
 
+<h2 align="center">Arquitectura  </h2>
+
+
+wweb_service 1: cliente_persona
+
+Java version: 21
+DB: Postgresql:  cliente_persona_db
+Broker message: Rabbit -> cloudAMQP
+Estructura del proyecto: Arquitectura hexagonal orientada a modulos y puertos
+
+wweb_service 2:
+
+
+Java version: 21
+DB: Postgresql: cuenta_movimientos_db
+Broker message: Rabbit -> cloudAMQP
+Estructura del proyecto: Arquitectura hexagonal orientada a modulos y puertos
 
 
 
