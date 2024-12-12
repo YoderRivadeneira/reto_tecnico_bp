@@ -1,0 +1,304 @@
+{
+	"info": {
+		"_postman_id": "a70d87d4-a16f-4803-b63f-724b17cffaa1",
+		"name": "cliente_persona",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14525067"
+	},
+	"item": [
+		{
+			"name": "crear_cliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"persona\": {\r\n    \"id\": 5,\r\n    \"nombre\": \"Yoder3\",\r\n    \"genero\": \"M\",\r\n    \"edad\": 30,\r\n    \"identificacion\": \"6777886698\",\r\n    \"direccion\": \"Calle Verdadera 456\",\r\n    \"telefono\": \"0987654321\"\r\n  },\r\n  \"clienteId\": \"uniqsueCssslien\",\r\n  \"contrasena\": \"newpasswssord123\",\r\n  \"estado\": true\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/clientes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtener_cliente",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"persona\": {\r\n    \"id\": 1,\r\n    \"nombre\": \"Juan\",\r\n    \"genero\": \"M\",\r\n    \"edad\": 31,\r\n    \"identificacion\": \"12345678\",\r\n    \"direccion\": \"Calle Verdadera 456\",\r\n    \"telefono\": \"0987654321\"\r\n  },\r\n  \"clienteId\": \"uniqueClienteId123\",\r\n  \"contrasena\": \"newpassword123\",\r\n  \"estado\": true\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/clientes/20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clientes",
+						"20"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "obtener_cliente",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"persona\": {\r\n    \"id\": 1,\r\n    \"nombre\": \"Juan\",\r\n    \"genero\": \"M\",\r\n    \"edad\": 31,\r\n    \"identificacion\": \"12345678\",\r\n    \"direccion\": \"Calle Verdadera 456\",\r\n    \"telefono\": \"0987654321\"\r\n  },\r\n  \"clienteId\": \"uniqueClienteId123\",\r\n  \"contrasena\": \"newpassword123\",\r\n  \"estado\": true\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/clientes/20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"clientes",
+								"20"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 11 Dec 2024 13:42:03 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 20,\n    \"persona\": {\n        \"id\": 1,\n        \"nombre\": \"Juan actualizado\",\n        \"genero\": \"M\",\n        \"edad\": 31,\n        \"identificacion\": \"12345678\",\n        \"direccion\": \"Calle Verdadera 456\",\n        \"telefono\": \"0987654321\"\n    },\n    \"clienteId\": \"uniqueClienteId123\",\n    \"contrasena\": \"newpassword123\",\n    \"estado\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "obtener_todos_cliente",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"persona\": {\r\n    \"id\": 1,\r\n    \"nombre\": \"Juan\",\r\n    \"genero\": \"M\",\r\n    \"edad\": 31,\r\n    \"identificacion\": \"12345678\",\r\n    \"direccion\": \"Calle Verdadera 456\",\r\n    \"telefono\": \"0987654321\"\r\n  },\r\n  \"clienteId\": \"uniqueClienteId123\",\r\n  \"contrasena\": \"newpassword123\",\r\n  \"estado\": true\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/clientes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clientes"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "obtener_todos_cliente",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"persona\": {\r\n    \"id\": 1,\r\n    \"nombre\": \"Juan\",\r\n    \"genero\": \"M\",\r\n    \"edad\": 31,\r\n    \"identificacion\": \"12345678\",\r\n    \"direccion\": \"Calle Verdadera 456\",\r\n    \"telefono\": \"0987654321\"\r\n  },\r\n  \"clienteId\": \"uniqueClienteId123\",\r\n  \"contrasena\": \"newpassword123\",\r\n  \"estado\": true\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/clientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"clientes"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 11 Dec 2024 13:45:28 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 20,\n        \"persona\": {\n            \"id\": 1,\n            \"nombre\": \"Juan actualizado\",\n            \"genero\": \"M\",\n            \"edad\": 31,\n            \"identificacion\": \"12345678\",\n            \"direccion\": \"Calle Verdadera 456\",\n            \"telefono\": \"0987654321\"\n        },\n        \"clienteId\": \"uniqueClienteId123\",\n        \"contrasena\": \"newpassword123\",\n        \"estado\": true\n    },\n    {\n        \"id\": 22,\n        \"persona\": {\n            \"id\": 2,\n            \"nombre\": \"Yoder\",\n            \"genero\": \"M\",\n            \"edad\": 30,\n            \"identificacion\": \"6777886699\",\n            \"direccion\": \"Calle Verdadera 456\",\n            \"telefono\": \"0987654321\"\n        },\n        \"clienteId\": \"uniqueClienteId163\",\n        \"contrasena\": \"newpassword123\",\n        \"estado\": true\n    },\n    {\n        \"id\": 29,\n        \"persona\": {\n            \"id\": 3,\n            \"nombre\": \"Yoder3\",\n            \"genero\": \"M\",\n            \"edad\": 30,\n            \"identificacion\": \"6777886698\",\n            \"direccion\": \"Calle Verdadera 456\",\n            \"telefono\": \"0987654321\"\n        },\n        \"clienteId\": \"uniqueClien\",\n        \"contrasena\": \"newpassword123\",\n        \"estado\": true\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "actualizar_cliente",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 20,\r\n    \"persona\": {\r\n        \"id\": 1,\r\n        \"nombre\": \"Juan is updt y send rabbit\",\r\n        \"genero\": \"M\",\r\n        \"edad\": 31,\r\n        \"identificacion\": \"12345678\",\r\n        \"direccion\": \"Calle Verdadera 456\",\r\n        \"telefono\": \"0987654321\"\r\n    },\r\n    \"clienteId\": \"uniqueClienteId123\",\r\n    \"contrasena\": \"newpassword123\",\r\n    \"estado\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/clientes/20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clientes",
+						"20"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "actualizar_cliente",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 20,\r\n    \"persona\": {\r\n        \"id\": 1,\r\n        \"nombre\": \"Juan actualizado\",\r\n        \"genero\": \"M\",\r\n        \"edad\": 31,\r\n        \"identificacion\": \"12345678\",\r\n        \"direccion\": \"Calle Verdadera 456\",\r\n        \"telefono\": \"0987654321\"\r\n    },\r\n    \"clienteId\": \"uniqueClienteId123\",\r\n    \"contrasena\": \"newpassword123\",\r\n    \"estado\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/clientes/20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"clientes",
+								"20"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 11 Dec 2024 13:41:50 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 20,\n    \"persona\": {\n        \"id\": 1,\n        \"nombre\": \"Juan actualizado\",\n        \"genero\": \"M\",\n        \"edad\": 31,\n        \"identificacion\": \"12345678\",\n        \"direccion\": \"Calle Verdadera 456\",\n        \"telefono\": \"0987654321\"\n    },\n    \"clienteId\": \"uniqueClienteId123\",\n    \"contrasena\": \"newpassword123\",\n    \"estado\": true\n}"
+				}
+			]
+		}
+	]
+}
