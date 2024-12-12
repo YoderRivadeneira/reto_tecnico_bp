@@ -123,3 +123,13 @@ Web_service 2:
 
 
 
+
+
+
+<h4>SWAGGER</h4>
+
+
+
+![image](https://github.com/user-attachments/assets/3d47d89d-e40b-4830-8988-e1ce034631c5)
+
+
