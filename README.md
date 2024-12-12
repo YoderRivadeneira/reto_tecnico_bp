@@ -85,6 +85,7 @@ PRUEBAS UNITARIAS
 
 ![image](https://github.com/user-attachments/assets/d72941d9-1707-4090-a767-a484c4c25eb2)
 
+![image](https://github.com/user-attachments/assets/c7a1e176-9e16-4e66-b131-c7cfb966ad68)
 
 
 ![image](https://github.com/user-attachments/assets/b265f8de-757c-44ee-a162-a24d2d25b370)
