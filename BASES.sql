@@ -1,7 +1,15 @@
-BASES
 
-cliente_persona_db
+DO
+$$
+BEGIN
+   IF NOT EXISTS (SELECT 1 FROM pg_database WHERE datname = 'cliente_persona_db') THEN
+      PERFORM dblink_exec('dbname=postgres', 'CREATE DATABASE cliente_persona_db');
+   END IF;
+END
+$$;
 
+
+\c cliente_persona_db;
 
 CREATE TABLE persona (
     id SERIAL PRIMARY KEY,
@@ -13,6 +21,15 @@ CREATE TABLE persona (
     telefono VARCHAR(15) NOT NULL
 );
 
+
+INSERT INTO persona (id, nombre, genero, edad, identificacion, direccion, telefono) VALUES
+(1, 'Juan is updt y send rabbit', 'M', 31, '12345678', 'Calle Verdadera 456', '987654321'),
+(2, 'Yoder', 'M', 30, '6777886699', 'Calle Verdadera 456', '987654321'),
+(3, 'Yoder3', 'M', 30, '6777886698', 'Calle Verdadera 456', '987654321'),
+(4, 'Juan4', 'M', 31, '12345621', 'Calle Verdadera 456', '987654351'),
+(5, 'updatewe rabbbit', 'M', 31, '12345666678', 'Calle Verdadera 456', '987654321');
+
+
 CREATE TABLE cliente (
     id SERIAL PRIMARY KEY,
     persona_id INT NOT NULL,
@@ -23,22 +40,28 @@ CREATE TABLE cliente (
 );
 
 
-cuenta_movimientos_db
+\c cuenta_movimientos_db;
 
+
+DO
+$$
+BEGIN
+   IF NOT EXISTS (SELECT 1 FROM pg_database WHERE datname = 'cuenta_movimientos_db') THEN
+      PERFORM dblink_exec('dbname=postgres', 'CREATE DATABASE cuenta_movimientos_db');
+   END IF;
+END
+$$;
 
 
 CREATE TABLE cuenta (
     id SERIAL PRIMARY KEY,
     numero_cuenta VARCHAR(50) UNIQUE NOT NULL,
-    tipo_cuenta VARCHAR(50) NOT NULL,
+    tipo_cuenta VARCHAR(50) NOT NULL DEFAULT 'Ahorro',
     saldo_inicial NUMERIC(10, 2) NOT NULL,
     estado BOOLEAN NOT NULL,
-    cliente_id INT NOT NULL
+    cliente_id INT NOT NULL,
+    CONSTRAINT fk_cliente FOREIGN KEY (cliente_id) REFERENCES cliente (id)
 );
-
-
-
-
 
 
 CREATE TABLE movimiento (
@@ -54,6 +77,7 @@ CREATE TABLE movimiento (
 
 ALTER TABLE cuenta
 ALTER COLUMN cliente_id TYPE INTEGER USING cliente_id::INTEGER;
+
 
 ALTER TABLE cuenta
 ALTER COLUMN tipo_cuenta SET DEFAULT 'Ahorro';
