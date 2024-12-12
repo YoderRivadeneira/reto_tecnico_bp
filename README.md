@@ -4,7 +4,7 @@
 <h2 align="center">Arquitectura  </h2>
 
 
-web_service 1: cliente_persona
+<h4>web_service 1: cliente_persona</h4>
 
 Java version: 21
 
@@ -16,7 +16,7 @@ Broker message: Rabbit -> cloudAMQP
 Estructura del proyecto: Arquitectura hexagonal orientada a modulos y puertos
 
 
-web_service 2:
+<h4>web_service 2:</h4>
 
 
 Java version: 21
